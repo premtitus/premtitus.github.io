@@ -1,0 +1,198 @@
+<!DOCTYPE HTML>
+
+<html>
+<style>
+#myInput {
+  background-image: url('searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 12px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 14px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 8px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+	<head>
+		<title>FINDERTUTOR</title>
+		<link rel="icon" href="favicon.ico" type="image/x-icon" />
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper" class="fade-in">
+
+				<!-- Intro -->
+					<div id="intro">
+						<h1>This is<br />
+						<span style="color:aqua">FINDERTUTOR</span></h1>
+						<p>Step up your academic performance in 2022 through a tutor from <b style="color:aqua">FINDERTUTOR</b>.</p>
+						<ul class="actions">
+							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
+						</ul>
+					</div>
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo" style="color:aqua">FINDERTUTOR</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">Who are we?</a></li>
+							<li><a href="free.html">Free Resources</a></li>
+							<li class="active"><a href="classes.html">Find a Tutor</a></li>
+							<li><a href="careers.html">Join Us</a></li>
+							<li><a href="contactus.html">Contact Us</a></li>
+						</ul>
+						<ul class="icons">
+							<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li> -->
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<h2>All Available Tutors</h2>
+								</header>
+									<p>Currently available subjects are <span style="color:violet">English Literature</span>, <span style="color:brown">Mathematical Methods</style>, <span style="color:green">English</span>, <span style="color:purple">Chemistry</span>, <span style="color:brown">Further Mathematics</span></p>
+									<p>Its all easy peasy here, with no fluff. All the relevent results of our tutors are displayed here with minimal words, so you can make your decision without confusion. To register a tutor of choice, please email <a href="https://mail.google.com" style="color:red" target="_blank" rel="noopener noreferrer">premtitus8@gmail.com</a>. In <span style="color:blue">FINDERTUTOR</span> we do not take a cut from the money you pay. This means all the money you pay will be received <b>only by the tutor</b>, unlike some other websites.</p>
+									<h3>Our Tutors</h3>
+
+
+
+<input type="text" id="myInput" onkeyup="TableSearch()" placeholder="Search for subjects.." title="Start typing the name of the subject you want a tutor for">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:37.5%;">Subject</th>
+    <th style="width:12.5%;">Name</th>
+    <th style="width:12.5%;">Studyscore</th>
+    <th style="width:12.5%;">Atar</th>
+    <th style="width:12.5%;">Experience</th>
+    <th style="width:12.5%;">Rate</th>
+  </tr>
+  <tr>
+    <td>Further Mathematics</td>
+    <td>Prem Titus</td>
+    <td>46</td>
+    <td>94.60</td>
+    <td>0 hours</td>
+    <td>$20 per hour</td>
+  </tr>
+  <tr>
+    <td>Chemistry</td>
+    <td>Tali</td>
+    <td>49</td>
+    <td>99.55</td>
+    <td>0 hours</td>
+    <td>$45 per hour</td>
+  </tr>
+  <tr>
+    <td>Psychology</td>
+    <td>Tali</td>
+    <td>46</td>
+    <td>99.55</td>
+    <td>0 hours</td>
+    <td>$45 per hour</td>
+  </tr>
+
+  <tr>
+    <td>English Literature</td>
+    <td>Tamir</td>
+    <td>47</td>
+    <td>96.90</td>
+    <td>20 hours</td>
+    <td>$45 per hour</td>
+  </tr>
+  <tr>
+    <td>Mathematical Methods</td>
+    <td>Tamir</td>
+    <td>42</td>
+    <td>96.90</td>
+    <td>32 hours</td>
+    <td>$45 per hour</td>
+  </tr>
+  <tr>
+    <td>History Revolutions</td>
+    <td>Tamir</td>
+    <td>43</td>
+    <td>96.90</td>
+    <td>0 hours</td>
+    <td>$45 per hour</td>
+  </tr>
+</table>
+<script>
+function TableSearch() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+
+								<!-- <ul class="actions special">
+									<li><a href="#" class="button large">Recommended tutors</a></li>
+								</ul> //-->
+							</article>
+
+<p=copyright>For any queries, simply email premtitus8@gmail.com</p>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
